@@ -45,3 +45,25 @@ new webpack.optimize.CommonsChunkPlugin({
         })
 //Dynamic Imports
 chunkFilename: '[name].bundle.js',
+//transpiler to convert 
+npm install --save-dev babel-loader babel-core 
+//babel es6 es 2015 
+npm install --save-dev babel-cli babel-preset-es2015
+//adding .babelrc file and the following json to install
+{
+  "presets": ["es2015"]
+}
+//babel-preset-react
+npm install --save-dev babel-preset-react
+//adding react to presers in .babelrc file
+{
+  "presets": ["es2015","react"]
+}
+//Babel dynamic lazy loading enable 
+npm install --save-dev babel-plugin-syntax-dynamic-import
+//adding the follwoing code to .babelrc file
+"plugins": ["syntax-dynamic-import"]
+//Adding react react-dom
+npm install --save react react-dom
+//react router
+npm install --save react-router

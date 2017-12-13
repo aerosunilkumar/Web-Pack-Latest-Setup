@@ -7,8 +7,9 @@ import csvData from './sample.csv'
 import { square } from './math'
 
 function component() {
+  const hello="hello world";
   var element = document.createElement('div');
-
+  console.log(hello);
   // // Lodash, currently included via a script, is required for this line to work
 
   // Lodash, now imported by this script
@@ -29,7 +30,7 @@ function component() {
   button.innerHTML = 'Click me and look at the console!';
   element.appendChild(br);
   element.appendChild(button);
-  button.onclick = e => import(/* webpackChunkName: "print" */ './print').then(module => {
+  button.onclick = e => import( /* webpackChunkName: 'print' */ './print').then(module => {
     var print = module.default;
 
     print();

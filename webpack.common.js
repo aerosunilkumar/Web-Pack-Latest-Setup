@@ -6,13 +6,15 @@ const webpack = require('webpack');
 module.exports = {
     entry: {
         // application:'./src/app.js',
-        app: './src/index.js',
+        app: './src/app/components/main/index.js',
         // print: './src/print.js'
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Output Management'
+            title: 'Output Management',
+            template: './src/app/components/main/index.template.ejs',
+            inject: 'body',
         }),
         // new webpack.optimize.CommonsChunkPlugin({
         //     name: 'common' // Specify the common bundle's name.
@@ -24,6 +26,13 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            },
             {
                 test: /\.css$/,
                 use: [
