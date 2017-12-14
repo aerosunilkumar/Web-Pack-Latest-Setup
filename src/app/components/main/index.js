@@ -1,32 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Navbar } from '../navbar/index'
-import { Jumbotron } from '../jumbotron/index'
+import { render } from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
 
-import { home } from '../home/index'
-import { about } from '../about/index'
-import { contact } from '../contact/index'
+import App from './app';
 
-import { HashRouter as Router, Route } from 'react-router-dom'
+const renderApp = () => {
+  render(
+    <AppContainer>
+      <App />
+    </AppContainer>,
+    document.getElementById('root'),
+  );
+};
 
-ReactDOM.render(
-  <div>
-    <Navbar />
-  </div>,
-  document.getElementById('react-nav')
-);
+// This is needed for Hot Module Replacement
+if (module.hot) {
+  module.hot.accept('./app', () => renderApp());
+}
 
-ReactDOM.render(
-  <div>
-    <Jumbotron />
-    <Router>
-      <div>
-        <Route exact path="/" component={home} />
-        <Route exact path="/home" component={home} />
-        <Route exact path="/about" component={about} />
-        <Route exact path="/contact" component={contact} />
-      </div>
-    </Router>
-  </div>,
-  document.getElementById('react-container')
-);
+renderApp();

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class contact extends React.Component {
+export default class contact extends React.Component {
     render() {
         return (
             <div className="jumbotron">

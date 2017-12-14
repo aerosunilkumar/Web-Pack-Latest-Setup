@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class home extends React.Component {
+export default class home extends React.Component {
     render() {
         return (
             <div className="jumbotron">

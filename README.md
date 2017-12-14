@@ -63,7 +63,7 @@ npm install --save-dev babel-preset-react
 npm install --save-dev babel-plugin-syntax-dynamic-import
 //adding the follwoing code to .babelrc file
 "plugins": ["syntax-dynamic-import"]
-//Adding react react-dom
+//Adding react react-dom --https://reacttraining.com/react-router/web/guides/philosophy
 npm install --save react react-dom
-//react router
-npm install --save react-router
+//react-hot-loader
+npm install --save react-hot-loader

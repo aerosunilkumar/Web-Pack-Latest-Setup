@@ -3,6 +3,7 @@ import { HashRouter as Router, Link } from 'react-router-dom'
 
 export class Navbar extends React.Component {
   render() {
+    
     return (
       <Router>
         <nav className="navbar navbar-inverse navbar-fixed-top">
@@ -18,7 +19,7 @@ export class Navbar extends React.Component {
             </div>
             <div id="navbar" className="navbar-collapse collapse">
               <ul className="nav navbar-nav">
-                <li className="active"><Link to="/">Home</Link></li>
+                <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
                 <li className="dropdown">

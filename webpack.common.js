@@ -27,6 +27,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.bundle\.js$/,
+                use: 'bundle-loader'
+              },
+            {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
