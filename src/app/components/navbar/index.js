@@ -15,7 +15,7 @@ export class Navbar extends React.Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <Link className="navbar-brand" to="/">ReactJS with Webpack</Link>
+              <Link className="navbar-brand" to="/">Real Deal</Link>
             </div>
             <div id="navbar" className="navbar-collapse collapse">
               <ul className="nav navbar-nav">

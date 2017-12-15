@@ -7,7 +7,9 @@ import App from './app';
 const renderApp = () => {
   render(
     <AppContainer>
-      <App />
+      <div>
+        <App />
+      </div>
     </AppContainer>,
     document.getElementById('root'),
   );

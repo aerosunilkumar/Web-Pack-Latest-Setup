@@ -67,3 +67,10 @@ npm install --save-dev babel-plugin-syntax-dynamic-import
 npm install --save react react-dom
 //react-hot-loader
 npm install --save react-hot-loader
+// redux react-redux
+npm install --save redux react-redux
+//reference redux
+https://www.youtube.com/watch?v=m8Zn2kWwe4U&index=9&list=PLQDnxXqV213JJFtDaG0aE9vqvp6Wm7nBg
+
+//redux-logger
+npm install --save redux-logger
